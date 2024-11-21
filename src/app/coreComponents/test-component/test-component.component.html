@@ -8,3 +8,22 @@
 @else {
     <p>status is desiabled</p>
 }
+
+<ul>
+@for(user of users; track user){
+ 
+    <li>{{user}}</li>
+ 
+}
+</ul>
+
+
+    @for(os of models; track os.id){
+        <h3>Name {{os.name}}</h3> 
+    }
+
+    <button (click) = "great()">Button</button>
+    {{counter}}
+
+    <img src="assets/img.avif" alt="Angular logo" width="50" height="50" />
+    
