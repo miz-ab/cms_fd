@@ -1,14 +1,20 @@
-
 .mat-toolbar {
-    background-color: #aaccbb;
+  background-color: #aaccbb;
 
-    .mat-mdc-button {
-        color: #2596be;
-    }
+//   .mdc-icon-button {
+//     color: #2596be;
+//   }
+
+  .mat-mdc-button {
+    color: #2596be;
+  }
+
+  .mat-mdc-button:hover {
+    border-radius: 0.25em;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+  }
 }
 
-
 .example-spacer {
-    flex: 1 1 auto;
-  }
-  
+  flex: 1 1 auto;
+}

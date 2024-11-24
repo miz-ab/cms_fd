@@ -6,5 +6,6 @@ import { CustomerComponent } from './core/customer/customer.component';
 export const routes: Routes = [
     {path : 'home', component:HomeComponent},
     {path: 'login', component:LoginComponent},
-    {path: 'customer', component:CustomerComponent}
+    {path: 'customer', component:CustomerComponent},
+    {path: 'customer/:token/:id', component:CustomerComponent}
 ];
