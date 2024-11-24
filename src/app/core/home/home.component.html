@@ -1,7 +1,7 @@
 <mat-button-toggle-group (change)="onToggleGroupChange($event)" name="fontStyle" aria-label="Font Style">
-    <mat-button-toggle [value]={_red}>Red</mat-button-toggle>
-    <mat-button-toggle [value]={_green}>Green</mat-button-toggle>
-    <mat-button-toggle [value]={_blue}>Blue</mat-button-toggle>
+    <mat-button-toggle >Red</mat-button-toggle>
+    <mat-button-toggle>Green</mat-button-toggle>
+    <mat-button-toggle >Blue</mat-button-toggle>
   </mat-button-toggle-group>
 
   <mat-card [ngClass]="color" appearance="outlined">
@@ -20,3 +20,7 @@
       <button (click) = "setGreen()" mat-stroked-button>Green</button>
     </div>
   </section>
+
+  
+
+  <h2 *ngIf="istrue">tell me about your self</h2>

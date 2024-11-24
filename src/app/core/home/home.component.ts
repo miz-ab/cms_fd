@@ -2,11 +2,17 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
-import { NgClass } from '@angular/common';
+import { NgClass, NgIf } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [MatButtonToggleModule, MatButtonModule, MatCardModule, NgClass],
+  imports: [MatButtonToggleModule, MatButtonModule, MatCardModule, NgClass, NgIf,
+    ReactiveFormsModule, MatFormFieldModule, MatInputModule,
+  ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -14,9 +20,16 @@ export class HomeComponent implements OnInit, OnChanges, DoCheck,AfterContentIni
 AfterContentChecked,AfterViewInit,AfterViewChecked{
 
   color = "color1";
-  _red = "red";
-  _blue = "blue";
-  _green = "green";
+  istrue = false;
+
+  form: FormGroup;
+
+  constructor(private fb: FormBuilder) {
+    this.form = this.fb.group({
+      username: ['', Validators.required],
+      password: ['', Validators.required],
+    });
+  }
 
   setBlue(){
     this.color = "color1"
