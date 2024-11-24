@@ -1,1 +1,22 @@
-<p>home works!</p>
+<mat-button-toggle-group (change)="onToggleGroupChange($event)" name="fontStyle" aria-label="Font Style">
+    <mat-button-toggle [value]={_red}>Red</mat-button-toggle>
+    <mat-button-toggle [value]={_green}>Green</mat-button-toggle>
+    <mat-button-toggle [value]={_blue}>Blue</mat-button-toggle>
+  </mat-button-toggle-group>
+
+  <mat-card [ngClass]="color" appearance="outlined">
+    <mat-card-content>
+        <p class="card-header">Simple card</p>
+    </mat-card-content>
+  </mat-card>
+  
+
+
+  <section>
+    <div class="example-label">Stroked</div>
+    <div class="example-button-row">
+      <button (click) = "setBlue()" mat-stroked-button>Red</button>
+      <button (click) = "setBrown()" mat-stroked-button>Blue</button>
+      <button (click) = "setGreen()" mat-stroked-button>Green</button>
+    </div>
+  </section>
