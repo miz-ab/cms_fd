@@ -1,9 +1,11 @@
 import {  } from '@angular/common';
 import { Component } from '@angular/core';
+import {MatButtonModule} from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 @Component({
   selector: 'app-test-component',
   standalone: true,
-  imports: [],
+  imports: [MatButtonModule,MatIconModule],
   templateUrl: './test-component.component.html',
   styleUrl: './test-component.component.scss'
 })

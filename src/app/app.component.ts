@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { TestComponentComponent } from './coreComponents/test-component/test-component.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatButtonModule } from '@angular/material/button';
-import {MatIconModule} from '@angular/material/icon';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 
@@ -11,7 +11,7 @@ import {MatIconModule} from '@angular/material/icon';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, TestComponentComponent, MatSlideToggleModule, MatButtonModule, MatIconModule],
+  imports: [RouterOutlet, TestComponentComponent, MatSlideToggleModule, MatButtonModule, MatDialogModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
