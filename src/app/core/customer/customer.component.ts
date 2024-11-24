@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink, RouterOutlet } from '@angular/router';
+import {MatButtonModule} from '@angular/material/button';
 
 @Component({
   selector: 'app-customer',
   standalone: true,
-  imports: [],
+  imports: [RouterOutlet, RouterLink, MatButtonModule],
   templateUrl: './customer.component.html',
   styleUrl: './customer.component.scss'
 })
