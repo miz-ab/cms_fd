@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    height: 90vh;
 }
 
 .mat-mdc-card {
@@ -16,10 +16,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 5px;
+    font-weight: bold;
   }
 
   .mat-mdc-form-field {
     width: 100%;
     
+  }
+  .mat-mdc-card-actions {
+    display: flex;
+    .mdc-button {
+        display: flex;
+        width: 50%;
+        border-radius: 10px;
+        margin-right: 5px;
+
+       
+    }
+    .btn_register {
+        background-color: #111aaa;
+    }
   }
 }
