@@ -6,12 +6,21 @@
 
     <form [formGroup]="form">
       <mat-card-content>
-        <app-input-field class="input_text"
+        <app-input-field
           label="Username"
           placeholder="Enter Username"
           [required]="true"
           errorMessage="Username is Required"
           [control]="usernameControl"
+        ></app-input-field>
+
+        <app-input-field
+          label="Password"
+          placeholder="Enter Password"
+          [required]="true"
+          type="password"
+          errorMessage="Password is Required"
+          [control]="passwordControl"
         ></app-input-field>
       </mat-card-content>
 

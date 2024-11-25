@@ -32,4 +32,8 @@ export class LoginComponent {
     return this.form.get('username') as FormControl;
   }
 
+  get passwordControl(): FormControl {
+    return this.form.get('password') as FormControl;
+  }
+
 }
