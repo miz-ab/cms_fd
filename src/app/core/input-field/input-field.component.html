@@ -1,5 +1,5 @@
 
-<mat-form-field appearance="fill">
+<mat-form-field appearance="outline">
     <mat-label>{{ label }}</mat-label>
     <input
       matInput
@@ -9,8 +9,8 @@
       [required]="required"
       [disabled]="disabled"
     />
-    <mat-error *ngIf="control.invalid && control.touched">
+    <!-- <mat-error *ngIf="control.invalid && control.touched">
       {{ errorMessage }}
-    </mat-error>
+    </mat-error> -->
   </mat-form-field>
   

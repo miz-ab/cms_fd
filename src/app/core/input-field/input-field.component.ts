@@ -16,7 +16,8 @@ export class InputFieldComponent {
   @Input() label: string = '';
   @Input() type: string = 'text';
   @Input() placeholder: string = '';
-  @Input() control!: FormControl | null;
+  //@Input() control!: FormControl;
+  @Input() control: FormControl | null | undefined;
   @Input() required: boolean = false;
   @Input() disabled: boolean = false;
   @Input() errorMessage: string = 'Invalid input';
