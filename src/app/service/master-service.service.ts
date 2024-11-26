@@ -14,7 +14,7 @@ export class MasterServiceService {
   constructor(private http: HttpClient) { }
 
   Proceedlogin(_data: LoginModel) {
-    console.log(`enterd data  ${_data}`)
+    console.log(`enterd data  ${_data}`);
     return _data;
     //return this.http.get<user[]>('http://localhost:3000/user?id=' + _data.username + '&&password=' + _data.password);
   }

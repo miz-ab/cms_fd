@@ -16,7 +16,7 @@ import { MasterServiceService } from '../../service/master-service.service';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [MatCardModule, MatInputModule, MatButtonModule, FormsModule, CommonModule, RouterLink],
+  imports: [MatCardModule, MatInputModule, MatButtonModule, FormsModule, CommonModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
@@ -52,7 +52,8 @@ export class LoginComponent implements OnInit{
 
   ProceedLogin(form: any) {
     if (form.valid) {
-      this.service.Proceedlogin(this._logindata);
+      console.log(this._logindata);
+      //this.service.Proceedlogin(this._logindata);
       // this.service.Proceedlogin(this._logindata).subscribe(item => {
       //   let _resp = item;
       //   if(_resp.length>0){
