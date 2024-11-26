@@ -7,13 +7,15 @@ import { FormBuilder, FormGroup, Validators, FormsModule } from '@angular/forms'
 import { InputFieldComponent } from '../input-field/input-field.component';
 import { ReactiveFormsModule, FormControl } from '@angular/forms';
 import { LoginModel } from '../../model/login-model.model';
+import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [MatCardModule, MatInputModule, MatFormFieldModule, MatButtonModule, ReactiveFormsModule, FormsModule],
+  imports: [MatCardModule, MatInputModule, MatButtonModule, FormsModule, CommonModule, RouterLink],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
