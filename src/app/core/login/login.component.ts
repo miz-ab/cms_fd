@@ -13,7 +13,7 @@ import { LoginModel } from '../../model/login-model.model';
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [MatCardModule, MatInputModule, MatFormFieldModule, MatButtonModule,InputFieldComponent, ReactiveFormsModule, FormsModule],
+  imports: [MatCardModule, MatInputModule, MatFormFieldModule, MatButtonModule, ReactiveFormsModule, FormsModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
