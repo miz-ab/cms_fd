@@ -1,0 +1,93 @@
+// .body_ {
+//   display: flex;
+//   margin: 10px;
+
+//   .form-body {
+//     display: flex;
+//     margin: 10px;
+//     width: 500px;
+//     opacity: 0.8; /* 50% transparent */
+//     border: 1px solid #ccc; /* 1px solid gray border */
+//     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* drop shadow */
+//     background-color: #fff; /* white background */
+
+//     .form_ {
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//         width: 100%;
+//         margin: 10px;
+//         padding: 5px;
+
+//         .btn-control {
+//             background-color: aqua;
+//             margin: 10px;
+//             padding: 10px;
+//         }
+//     }
+//   }
+// }
+
+
+
+
+.body_ {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.mat-mdc-card {
+opacity: 0.8; /* 50% transparent */
+border: 1px solid #ccc; /* 1px solid gray border */
+box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* drop shadow */
+background-color: #fff; /* white background */
+}
+
+.mat-mdc-card {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+  width: 400px;
+  
+.mat-mdc-card-title {
+  min-width: 365px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  font-weight: bold;
+}
+
+
+.mat-mdc-card-content{
+  display: flex;
+  flex-direction: column;
+}
+
+.mat-mdc-form-field {
+  display: flex;
+  width: 100% !important;
+}
+
+.mdc-text-field {
+  display: flex;
+  width: 100%;
+}
+
+.mat-mdc-card-actions {
+  display: flex;
+  .mdc-button {
+      display: flex;
+      width: 50%;
+      border-radius: 10px;
+      margin-right: 5px;
+
+     
+  }
+  .btn_register {
+      background-color: #157967;
+  }
+}
+}

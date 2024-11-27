@@ -9,7 +9,7 @@ import { ReactiveFormsModule, FormControl } from '@angular/forms';
 import { LoginModel } from '../../model/login-model.model';
 import { CommonModule } from '@angular/common';
 import { Router, RouterLink } from '@angular/router';
-import { MasterServiceService } from '../../service/master-service.service';
+//import { MasterServiceService } from '../../service/master-service.service';
 
 
 
@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit{
   //   });
   // }
 
-  constructor(private service: MasterServiceService, private router:Router){
+  constructor(private router:Router){
 
   }
   ngOnInit(): void {
