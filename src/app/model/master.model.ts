@@ -7,3 +7,4 @@ export interface Customers {
     isActive: boolean
     statusname: string
 }
+
