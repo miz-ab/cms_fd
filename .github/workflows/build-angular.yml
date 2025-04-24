@@ -14,10 +14,12 @@ jobs:
 
     steps:
       - name: Show Event Type
-        run: echo "📦 Event type: $GITHUB_EVENT_NAME"
+        run: |
+         echo "📦 Event type: $GITHUB_EVENT_NAME"
 
       - name: Show Branch Name
-        run: echo "🌿 Branch: $GITHUB_REF"
+        run: |
+         echo "🌿 Branch: $GITHUB_REF"
 
       - name: Log Branch Check
         run: |
@@ -28,7 +30,8 @@ jobs:
           fi
 
       - name: Show Triggered By
-        run: echo "🚀 Pipeline triggered by $GITHUB_ACTOR"
+        run: |
+         echo "🚀 Pipeline triggered by $GITHUB_ACTOR"
 
       - name: Log Pipeline Start Time
         run: echo "🕒 Pipeline execution started at $(date)"
