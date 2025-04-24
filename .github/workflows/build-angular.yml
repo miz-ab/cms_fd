@@ -13,37 +13,36 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-       - name: Show Event Type
-         run: echo "📦 Event type: $GITHUB_EVENT_NAME"
+      - name: Show Event Type
+        run: echo "📦 Event type: $GITHUB_EVENT_NAME"
 
+      - name: Show Branch Name
+        run: echo "🌿 Branch: $GITHUB_REF"
 
-       - name: Show Branch Name
-         run: echo "🌿 Branch: $GITHUB_REF"
-
-       - name: Log Branch Check
-         run: |
+      - name: Log Branch Check
+        run: |
           if [[ "${GITHUB_REF}" != "refs/heads/main" ]]; then
             echo "ℹ️ Not on main branch. This workflow is set to only trigger on main."
           else
             echo "✅ On main branch. Proceeding with build..."
           fi
 
-       - name: Show Triggered By
-         run: echo "🚀 Pipeline triggered by $GITHUB_ACTOR"
+      - name: Show Triggered By
+        run: echo "🚀 Pipeline triggered by $GITHUB_ACTOR"
 
-       - name: Log Pipeline Start Time
-         run: echo "🕒 Pipeline execution started at $(date)"
+      - name: Log Pipeline Start Time
+        run: echo "🕒 Pipeline execution started at $(date)"
 
-       - name: Checkout code
-         uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-       - name: Set up Node.js
-         uses: actions/setup-node@v4
-         with:
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
           node-version: '20'
 
-       - name: Install dependencies
-         run: npm install
+      - name: Install dependencies
+        run: npm install
 
-       - name: Build Angular app
-         run: npm run build -- --configuration=production
+      - name: Build Angular app
+        run: npm run build -- --configuration=production
