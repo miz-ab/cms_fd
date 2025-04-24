@@ -49,3 +49,10 @@ jobs:
 
       - name: Build Angular app
         run: npm run build -- --configuration=production
+
+      - name: Deploy to Plesk via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4
+        with:
+          server: ${{ secrets.TEST_TELE_FTP_SERVER_NAME }}
+          username: ${{ secrets.TEST_TELE_FTP_USERNAME }}
+          password: ${{ secrets.TEST_TELE_FTP_PASSWORD }}
