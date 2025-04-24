@@ -51,7 +51,7 @@ jobs:
         run: npm run build -- --configuration=production
 
       - name: Deploy to Plesk via FTP
-        uses: SamKirkland/FTP-Deploy-Action@4.3.4
+        uses: SamKirkland/FTP-Deploy-Action@4.3.5
         with:
           server: ${{ secrets.TEST_TELE_FTP_SERVER_NAME }}
           username: ${{ secrets.TEST_TELE_FTP_USERNAME }}
