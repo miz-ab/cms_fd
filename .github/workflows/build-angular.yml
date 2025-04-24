@@ -57,9 +57,4 @@ jobs:
           username: ${{ secrets.TEST_TELE_FTP_USERNAME }}
           password: ${{ secrets.TEST_TELE_FTP_PASSWORD }}
           timeout: 300
-          filePatterns: '**'
-          server-dir: '/'
-          clean: true
-          preservePaths: true
-          trustSSL: true
           log-level: verbose
