@@ -56,9 +56,7 @@ jobs:
           server: ${{ secrets.TEST_TELE_FTP_SERVER_NAME }}
           username: ${{ secrets.TEST_TELE_FTP_USERNAME }}
           password: ${{ secrets.TEST_TELE_FTP_PASSWORD }}
-          secure: false
-          passive: true
-          timeout: 60
+          timeout: 120
           filePatterns: '**'
           remoteDirectory: '/'
           clean: true
