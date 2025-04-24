@@ -56,5 +56,7 @@ jobs:
           server: ${{ secrets.TEST_TELE_FTP_SERVER_NAME }}
           username: ${{ secrets.TEST_TELE_FTP_USERNAME }}
           password: ${{ secrets.TEST_TELE_FTP_PASSWORD }}
+          local-dir: dist/cms_angular/
+          server-dir: httpdocs/
           timeout: 300
           log-level: verbose
