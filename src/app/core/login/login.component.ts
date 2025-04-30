@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -9,6 +9,7 @@ import { ReactiveFormsModule, FormControl } from '@angular/forms';
 import { LoginModel } from '../../model/login-model.model';
 import { CommonModule } from '@angular/common';
 import { Router, RouterLink } from '@angular/router';
+import { LoggerServiceService } from '../../service/logger/logger-service.service';
 //import { MasterServiceService } from '../../service/master-service.service';
 
 
@@ -21,7 +22,7 @@ import { Router, RouterLink } from '@angular/router';
   styleUrl: './login.component.scss'
 })
 export class LoginComponent implements OnInit{
-  //form: FormGroup;
+  private logger = inject(LoggerServiceService);
 
   _logindata: LoginModel = {
     username: '',
@@ -39,7 +40,7 @@ export class LoginComponent implements OnInit{
 
   }
   ngOnInit(): void {
-    
+    this.logger.info("Init triggered")
   }
 
   // get usernameControl(): FormControl {
@@ -53,6 +54,7 @@ export class LoginComponent implements OnInit{
   ProceedLogin(form: any) {
     if (form.valid) {
       console.log(this._logindata);
+      this.logger.warn("warn message proceed to login");
       //this.service.Proceedlogin(this._logindata);
       // this.service.Proceedlogin(this._logindata).subscribe(item => {
       //   let _resp = item;
