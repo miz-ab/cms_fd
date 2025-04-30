@@ -28,6 +28,7 @@ yarn-error.log
 !.vscode/extensions.json
 .history/*
 
+
 # Miscellaneous
 /.angular/cache
 .sass-cache/
@@ -37,6 +38,10 @@ yarn-error.log
 testem.log
 /typings
 
+
 # System files
 .DS_Store
 Thumbs.db
+
+# Build file
+.github\workflows\build-angular.yml
